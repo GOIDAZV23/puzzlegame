@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Головоломка - Дипломный проект</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Головоломка</h1>
+    
+    <!-- Выбор сложности -->
+    <div class="difficulty-selector">
+      <label for="difficulty">Уровень сложности:</label>
+      <select id="difficulty">
+        <option value="3">Легко (3×3)</option>
+        <option value="4">Средне (4×4)</option>
+        <option value="5">Сложно (5×5)</option>
+      </select>
+    </div>
+
+    <!-- Инструкция -->
+    <details class="instructions">
+      <summary>📖 Как играть?</summary>
+      <p>Соберите все плитки по порядку (от 1 до последней), перемещая их в пустую ячейку. Нажимайте на плитку рядом с пустотой, чтобы переместить её.</p>
+    </details>
+
+    <!-- Статистика -->
+    <div class="stats">
+      <div class="stat">
+        <span>Ходы:</span>
+        <strong id="moves">0</strong>
+      </div>
+      <div class="stat">
+        <span>Время:</span>
+        <strong id="timer">0:00</strong>
+      </div>
+      <div class="stat">
+        <span id="status">Играем...</span>
+      </div>
+    </div>
+
+    <!-- Игровое поле -->
+    <div class="board" id="board"></div>
+
+    <!-- Кнопки управления -->
+    <div class="controls">
+      <button id="shuffleButton">🔀 Новая игра</button>
+      <button id="resetButton">↻ Сбросить</button>
+    </div>
+
+    <!-- Рекорды -->
+    <div class="records">
+      <h3>Лучшие результаты</h3>
+      <div id="recordsList" class="records-list"></div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
